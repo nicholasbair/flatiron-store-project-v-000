@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
   # :recoverable, :rememberable, :trackable,
 
   def current_cart=(cart)
-    self.current_cart_id = cart.id
+    self.current_cart_id = cart&.id
   end
 
   def current_cart

@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(version: 20170624144843) do
 
   create_table "carts", force: :cascade do |t|
     t.integer "user_id"
+    t.integer "status",  default: 0
   end
 
   create_table "categories", force: :cascade do |t|

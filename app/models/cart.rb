@@ -3,6 +3,8 @@ class Cart < ActiveRecord::Base
   has_many :line_items
   has_many :items, through: :line_items
 
+  enum status: [:submitted]
+
   def total
     line_items.collect { |line_item| line_item.item.price * line_item.quantity }.sum
   end
