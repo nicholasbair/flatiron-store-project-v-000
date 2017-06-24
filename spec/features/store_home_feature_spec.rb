@@ -65,7 +65,7 @@ describe 'Feature Test: Store', :type => :feature do
 
       context "logged in" do
         before(:each) do
-          @user = User.first
+          @user = User.new(:email => 'test@test.test', :password => 'password')
           login_as(@user, scope: :user)
         end
 

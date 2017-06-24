@@ -3,9 +3,9 @@ class User < ActiveRecord::Base
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
-  devise :database_authenticatable, :validatable
+  devise :database_authenticatable, :validatable, :registerable
   # We should not need these
-  # :registerable, :recoverable, :rememberable, :trackable,
+  # :recoverable, :rememberable, :trackable,
 
   def current_cart=(cart)
     self.current_cart_id = cart.id
